@@ -2,43 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">The Tech Blog!!</h1>
-    <p class="lead">Share your thoughts and ideas about all things tech!</p>
-  </div>
-</div>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <nav>
-        {{#if loggedIn}}
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">The Tech Blog!!</h1>
+         <p class="lead">Share your thoughts and ideas about all things tech!</p>
+      </div>
+    </div>
+    <div>
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link" href="/dashboard">Dashboard </a>
-          </li>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
+                <a class="btn btn-outline-success" href="/">Home</a>
+            </li>
+            {{#if loggedIn }}
+            <li class="nav-item active">
+                <a class="btn btn-outline-success" href="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+                <button type="button" id="logout" class="btn btn-outline-danger">Logout</button>
+            </li>
+            {{else}}
+            <a class="btn btn-success" href="/login" role="button">Login</a>
+            {{/if}}
+            </li>
+        </ul>
+    </div>
     <main>
-      {{{ body }}}
+        {{{ body }}}
     </main>
-    <footer>
-      See ya Next Time!
-    </footer>
-  </div>
-  
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
+    <div class="d-flex flex-column min-vh-100 mx-auto" style="width: auto;">
+        <nav>
+        </nav>
+        <main class="flex-fill">
+        </main>
+        <footer>
+            <p>Thank You for Visiting Tech Blog!</p>
+        </footer>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
