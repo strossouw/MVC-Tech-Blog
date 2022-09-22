@@ -36,5 +36,3 @@ This project was developed under the MIT license.
 ## Questions  
 See my Github GitHub
 Email me srossouw@uwm.edu
-
-## Demo
