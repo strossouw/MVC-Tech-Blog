@@ -19,13 +19,17 @@ This application is an web based tech blog. In this blog users can add, edit, an
 * [Questions](#questions)
   
 ## Technologies
-
-
-
-## Installation
-
+This application is deployed to heroku, uses bcrypt, dotenv, express, handlebars, mysql1 and sequelize.
 
 ## Usage
+To use this application, you need to first create an account on the app through the website. Once you are logged in you will be able to post, view, and edit tech blog posts. 
+
+![image](https://user-images.githubusercontent.com/105831699/191662505-7af12884-118a-430e-94aa-ddacfa22741d.png)
+
+![image](https://user-images.githubusercontent.com/105831699/191662589-15b9642f-5eab-4c79-910b-14bde335baab.png)
+
+![image](https://user-images.githubusercontent.com/105831699/191662626-4785208d-2984-4f8d-a99e-8b43798ee9af.png)
+
 
 
 ## License
